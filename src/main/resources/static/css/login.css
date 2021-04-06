@@ -1,0 +1,27 @@
+@charset "UTF-8"
+
+.textcenter{
+    text-align=center;
+}
+
+.arrcenter{
+    display : table-cell;
+    vertical-align: middle;
+
+}
+
+. rowheight100{
+
+    height:100px;
+
+}
+
+.rowheight50{
+    height:50px;
+}
+
+button
+{
+    color:red;
+}
+
