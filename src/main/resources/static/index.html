@@ -7,23 +7,26 @@
 
 <body>
 <link rel="stylesheet" type="text/css" href="/css/login.css">
-<div>
-    <label style="color:red">ID</label>
-    <textarea>
-</textarea>
+
+<div class ="container">
+    <form action="login" method="post">
+        <div>
+            <label>ID</label>
+            <input type="text" id="id" name="id" placeholder="id를 입력하세요">
+            </input>
+        </div>
+
+        </br>
+        <div>
+            <label>Password</label>
+            <input type="text" id="pw" name="pw" placeholder="pw를 입력하세요">
+            </input>
+        </div>
+        <button type="submit">로그인</button>
+        <a href="/join">회원가입</a>
+    </form>
 </div>
 
-</br>
-<div>
-    <label>Password</label>
-    <textarea>
-    </textarea>
-</div>
 
-</br>
-<a href="/join">회원가입</a>
-<button>로그인</button>
-</br>
-this is login view
 </body>
 </html>
