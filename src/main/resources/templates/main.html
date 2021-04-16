@@ -9,7 +9,7 @@ body {
 
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -33,43 +33,33 @@ body {
   color: #f1f1f1;
 }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.sidenav button{
+     background-color: #111;
 }
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.sidenav textarea{
+  background-color: #111;
 }
 </style>
 </head>
 <body>
 
 <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <button>
+
+    </button>
+    <button>
+
+    </button>
+    <textarea>
+
+    </textarea>
+    <a href="#">나는 누구인가요</a>
+    <a href="#">학력</a>
+    <a href="#">프로젝트 연혁</a>
+    <a href="#">자격증 목록</a>
+    <a href="#">자기소개서</a>
 </div>
 
-<!--<h2>Animated Sidenav Example</h2>
-<p>Click on the element below to open the side navigation menu.</p>-->
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
 
 </body>
 </html>
