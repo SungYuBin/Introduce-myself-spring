@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-이건 회원가입입니다.
-</body>
+<link rel="stylesheet" type="text/css" href="/css/login.css">
+
+<div class ="container">
+    <form action="join" method="post">
+        <div>
+            <label>ID</label>
+            <input type="text" id="id" name="id" placeholder="id를 입력하세요">
+            </input>
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="text" id="pw" name="pw" placeholder="pw를 입력하세요">
+            </input>
+        </div>
+        <div>
+            <label>Name</label>
+            <input type="text" id="name" name="name" placeholder="사용자 이름을 입력하세요">
+            </input>
+        </div>
+        <div>
+            <label>Age</label>
+            <input type="text" id="age" name="age" placeholder="사용자 연령을 입력하세요">
+            </input>
+        </div>
+        </br>
+        <button type="submit">회원가입하기</button>
+    </form>
+</div>
 </html>
