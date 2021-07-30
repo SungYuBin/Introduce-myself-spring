@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--리포지 토리의 위치를 정확하게 명시해야합니다 -->
+<mapper namespace="Introducemyself.Introducemyselfspring.repository.UserInfoRepository">
+<select id="getUserInfo" resultType="java.util.HashMap">
+    SELECT * FROM intro_db.userinfo;
+</select>
+</mapper>

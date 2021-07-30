@@ -15,9 +15,25 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-devtools'
 
+	//mysql 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.projectlombok:lombok:1.18.16'
+	compile 'mysql:mysql-connector-java'
+
+
+	implementation 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//BCrypt 암호화
+	implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.3m'
+	annotationProcessor('org.projectlombok:lombok')
+
+	//mybatis
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'mysql:mysql-connector-java'
+
 }
 
 test {

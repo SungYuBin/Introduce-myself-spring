@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/intro_db?characterEncoding=utf8
+    username: root
+    password: skdms1048
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: kr.co.fastcampus.eatgo
+  mapper-locations: mybatis/mapper/**/*.xml
