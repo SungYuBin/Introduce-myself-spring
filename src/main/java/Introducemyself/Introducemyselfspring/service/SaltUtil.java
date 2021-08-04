@@ -10,7 +10,7 @@ public class SaltUtil {
 
     //솔트 함수를 관리하는 모듈
     public String encodePassword(String salt, String password) {
-        return BCrypt.hashpw(salt, password);
+        return BCrypt.hashpw(password, salt);
     }
 
     public String getSalt() {

@@ -2,51 +2,60 @@ package Introducemyself.Introducemyselfspring;
 
 import Introducemyself.Introducemyselfspring.repository.UserRepository;
 import Introducemyself.Introducemyselfspring.controller.Service.UserInfoService;
+import Introducemyself.Introducemyselfspring.service.AuthService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.jupiter.api.Test;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.List;
 
-@WebAppConfiguration
+//@WebAppConfiguration
 @SpringBootTest
+@Slf4j
+
 public class UserRepositoryTest {
 
-    @Autowired
-    private UserRepository userRepository;
     @Autowired
     private UserInfoService userInfoService;
 
     @Autowired
-    private SqlSessionFactory sqlFactory;
+    private UserRepository userRepository;
+
+    @Autowired
+    private AuthService authService;
 
 
-
+    //데이터 베이스에 내역을 추가가능
     @Test
     public void Create(){
-        UserInfo user=
-                UserInfo.builder()
-                        .id("Test1")
-                        .pw("test2")
-                        .name("Test3")
-                        .age("Test5")
-                        .build();
-        userRepository.save(user);
+        UserInfo user= new UserInfo();
+        user.setId("1");
+        user.setPw("1");
+        user.setName("1");
+        user.setAge("1");
+
+        authService.signUpUser(user);
+
 
         int i=0;
     }
 
+    //DB모든내역을 불러옵니다 JPA
     @Test
     public void Read(){
         //이렇게 하면 모든 데이터를 가지고옵니다
-        List<UserInfo> value = userRepository.findAll();
-        int i=0;
+       List<UserInfo> value = userRepository.findAll();
+       int i=0;
 
     }
 
-    @Test
+    //DB내역을 불러옵니다 마이바티스스
+   @Test
     public void ReadBaits(){
         Object dfsf=  userInfoService.getUserInfo();
         int i=0;
