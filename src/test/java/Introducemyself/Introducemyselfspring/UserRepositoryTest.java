@@ -38,7 +38,7 @@ public class UserRepositoryTest {
         user.setPw("1");
         user.setName("1");
         user.setAge("1");
-
+        //userRepository.save(user);
         authService.signUpUser(user);
 
 
@@ -49,8 +49,10 @@ public class UserRepositoryTest {
     @Test
     public void Read(){
         //이렇게 하면 모든 데이터를 가지고옵니다
-       List<UserInfo> value = userRepository.findAll();
-       int i=0;
+       //List<UserInfo> value = userRepository.findAll();
+
+       UserInfo user =authService.loginUser("1","1");
+        int i=0;
 
     }
 

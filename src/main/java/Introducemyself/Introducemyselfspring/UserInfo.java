@@ -31,9 +31,10 @@ public class UserInfo {
     @Column(name = "age")
     private String age;
 
-   @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "salt_id")
     private Salt salt;
+    //private String salt;
 
 
 }

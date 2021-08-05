@@ -1,5 +1,6 @@
 package Introducemyself.Introducemyselfspring.repository;
 
+import Introducemyself.Introducemyselfspring.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.type.MappedJdbcTypes;
 import org.springframework.stereotype.Repository;
@@ -12,5 +13,6 @@ import java.util.Map;
 public interface UserInfoRepository {
 
     List<Map<String,Object>> getUserInfo();
-
+    UserInfo getSelectUserinfo(String id);
+    //Map<String,Object> getSelectUserinfo(String id);
 }

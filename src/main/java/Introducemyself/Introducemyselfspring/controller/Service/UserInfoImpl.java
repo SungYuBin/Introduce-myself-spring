@@ -19,4 +19,16 @@ public class UserInfoImpl implements UserInfoService {
     public List<Map<String, Object>> getUserInfo() {
         return userInfoRepository.getUserInfo();
     }
+
+    @Override
+    public UserInfo getSelectUserinfo(String id) {
+        return userInfoRepository.getSelectUserinfo(id);
+        //return null;
+    }
+
+//    @Override
+//    public Map<String, Object> getSelectUserinfo(String id) {
+//        return userInfoRepository.getSelectUserinfo(id);
+//     //   return null;
+//    }
 }
