@@ -13,6 +13,9 @@ import java.util.Map;
 public interface UserInfoRepository {
 
     List<Map<String,Object>> getUserInfo();
-    UserInfo getSelectUserinfo(String id);
-    //Map<String,Object> getSelectUserinfo(String id);
+    //UserInfo getSelectUserinfo(String id);
+    //List<Map<String,Object>>  getSelectUserinfo(String id);
+    Map<String,Object>  getSelectUserinfo(String id);
+    String getSalt(String id);
+
 }

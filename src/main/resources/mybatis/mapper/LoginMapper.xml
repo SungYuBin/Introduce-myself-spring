@@ -3,12 +3,26 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--리포지 토리의 위치를 정확하게 명시해야합니다 -->
+
 <mapper namespace="Introducemyself.Introducemyselfspring.repository.UserInfoRepository">
     <select id="getUserInfo" resultType="java.util.HashMap">
         SELECT * FROM intro_db.userinfo;
     </select>
-    <select id="getSelectUserinfo" resultType="Introducemyself.Introducemyselfspring.UserInfo">
-        SELECT * FROM intro_db.userinfo
+
+<!--    <select id="getSelectUserinfo" resultType="Introducemyself.Introducemyselfspring.UserInfo">-->
+<!--        SELECT * FROM intro_db.userinfo-->
+<!--        WHERE id=#{id};-->
+<!--    </select>-->
+
+    <select id="getSelectUserinfo" resultType="java.util.HashMap">
+        SELECT * FROM userinfo
         WHERE id=#{id};
     </select>
+
+    <select id="getSalt" resultType="string">
+        SELECT salt FROM salt
+        WHERE id=#{id};
+    </select>
+
+
 </mapper>

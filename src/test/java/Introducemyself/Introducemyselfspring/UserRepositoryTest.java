@@ -59,8 +59,13 @@ public class UserRepositoryTest {
     //DB내역을 불러옵니다 마이바티스스
    @Test
     public void ReadBaits(){
-        Object dfsf=  userInfoService.getUserInfo();
-        int i=0;
+       Object dfs =  userInfoService.getSelectUserinfo("1");
+       int i=0;
     }
+
+
+
+
+
 
 }

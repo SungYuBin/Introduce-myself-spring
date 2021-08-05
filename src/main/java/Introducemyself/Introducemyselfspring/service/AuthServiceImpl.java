@@ -69,6 +69,7 @@ public class AuthServiceImpl implements  AuthService{
             //비밀번호가없습니다 선생님
             return  null;
         }
+        //로그인 성공했다는 메세지를 출력하고싶어요
         return userData;
     }
 }

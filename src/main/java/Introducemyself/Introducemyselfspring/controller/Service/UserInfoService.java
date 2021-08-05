@@ -10,6 +10,7 @@ public interface UserInfoService {
     //마이바티스
     List<Map<String, Object>> getUserInfo();
 
-    //Map<String, Object> getSelectUserinfo(String id);
     UserInfo getSelectUserinfo(String id);
+
+    String getSalt(String id);
 }

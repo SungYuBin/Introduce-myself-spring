@@ -26,4 +26,9 @@ public class Salt {
     public Salt(String salt) {
         this.salt = salt;
     }
+
+    public Salt(int _id,String _salt){
+        this.id = _id;
+        this.salt = _salt;
+    }
 }
