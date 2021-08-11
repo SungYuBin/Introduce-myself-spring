@@ -30,6 +30,7 @@ public class UserRepositoryTest {
     private AuthService authService;
 
 
+    //회원가입기능
     //데이터 베이스에 내역을 추가가능
     @Test
     public void Create(){
@@ -45,6 +46,8 @@ public class UserRepositoryTest {
         int i=0;
     }
 
+
+    //로그인기능
     //DB모든내역을 불러옵니다 JPA
     @Test
     public void Read(){

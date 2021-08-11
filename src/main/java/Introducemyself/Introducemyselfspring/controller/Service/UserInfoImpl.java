@@ -28,6 +28,10 @@ public class UserInfoImpl implements UserInfoService {
         UserInfo userInfo = new UserInfo();
         Map<String,Object> userData=  userInfoRepository.getSelectUserinfo(id);
 
+        if(userData==null)
+        {
+            return null;
+        }
         String saltkey = userData.get("salt_id").toString();
 
         String salt= getSalt(saltkey).toString();
