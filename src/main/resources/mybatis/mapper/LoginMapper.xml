@@ -15,7 +15,7 @@
 <!--    </select>-->
 
     <select id="getSelectUserinfo" resultType="java.util.HashMap">
-        SELECT * FROM userinfo
+        SELEHttpURLConnectionCT * FROM userinfo
         WHERE id=#{id};
     </select>
 

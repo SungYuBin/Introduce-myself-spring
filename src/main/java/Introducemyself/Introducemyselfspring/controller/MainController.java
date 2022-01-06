@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 
-    //@PostMapping("main")
-    @PostMapping("main")
-    public String PostMain(Model model)
-    {
-        Object dfsf= model.getAttribute("userid");
-        return "main";
-    }
+//    //@PostMapping("main")
+//    @PostMapping("main")
+//    public String PostMain(Model model)
+//    {
+//        Object dfsf= model.getAttribute("userid");
+//        return "main";
+//    }
 
 }

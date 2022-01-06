@@ -40,23 +40,16 @@ public class LoginController {
 
 
     @PostMapping("login")
-    //@RequestMapping("login",method = RequestMethod.POST)
-    //@RequestMapping(value ="login", method = RequestMethod.POST)
     public String Postlogin(String id, String pw , Model model)
     {
-        UserInfo user =authService.loginUser(id,pw);
-        if(user==null)
-        {
-            model.addAttribute("msg","로그인실패");
-            model.addAttribute("url","/");
-            return "redirect";
-        }
-
-        model.addAttribute("userid",user);
+//        UserInfo user =authService.loginUser(id,pw);
+//        if(user==null)
+//        {
+//            model.addAttribute("msg","로그인실패");
+//            model.addAttribute("url","/");
+//            return "redirect";
+//        }
+//        model.addAttribute("userid",user);
         return "main";
     }
-
-
-
-
 }
